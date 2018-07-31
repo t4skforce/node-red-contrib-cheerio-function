@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-jquery",
+  "name": "node-red-contrib-cheerio-function",
   "version": "1.0.0",
   "description": "Node-RED module cheerio a fast, flexible & lean implementation of core jQuery designed specifically for the server.",
   "author": "t4skforce1337",
