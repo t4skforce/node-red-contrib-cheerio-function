@@ -17,8 +17,8 @@ Cheerio parses markup and provides an API for traversing/manipulating the result
 
 ## Example Flow
 This example flow fetches the full download link for the latest android-sdk-tools for linux form the wepage.
-![alt text](https://raw.githubusercontent.com/t4skforce/node-red-contrib-cheerio-function/images/editor.png)
-![alt text](https://raw.githubusercontent.com/t4skforce/node-red-contrib-cheerio-function/images/example_flow.png)
+![alt text](https://github.com/t4skforce/node-red-contrib-cheerio-function/raw/master/images/editor.png)
+![alt text](https://github.com/t4skforce/node-red-contrib-cheerio-function/raw/master/images/example_flow.png)
 
 ```[{"id":"b6a346f6.e20ab8","type":"http in","z":"f4239029.65f45","name":"","url":"/android-sdk/latest","method":"get","upload":false,"swaggerDoc":"","x":120,"y":100,"wires":[["7c84616a.4312"]]},{"id":"8e1394d8.ff4f48","type":"http response","z":"f4239029.65f45","name":"","statusCode":"","headers":{"Content-Type":"application/json"},"x":810,"y":100,"wires":[]},{"id":"7c84616a.4312","type":"http request","z":"f4239029.65f45","name":"","method":"GET","ret":"txt","url":"https://developer.android.com/studio/","tls":"7434bd72.4c5b14","x":310,"y":100,"wires":[["fbbeb13d.ce447"]]},{"id":"fbbeb13d.ce447","type":"cheerio-function","z":"f4239029.65f45","name":"extract sdk-tools-linux","func":"msg.payload={url:$(\"a[href*='sdk-tools-linux']\")\n.attr(\"href\")};\nreturn msg;","outputs":1,"noerr":0,"x":520,"y":100,"wires":[["92a1a104.8b461"]]},{"id":"92a1a104.8b461","type":"json","z":"f4239029.65f45","name":"","property":"payload","action":"str","pretty":true,"x":690,"y":100,"wires":[["8e1394d8.ff4f48"]]},{"id":"204a6e81.d03bc2","type":"comment","z":"f4239029.65f45","name":"https://developer.android.com/studio/","info":"","x":160,"y":60,"wires":[]},{"id":"7434bd72.4c5b14","type":"tls-config","z":"","name":"NO Cert Check","cert":"","key":"","ca":"","certname":"","keyname":"","caname":"","verifyservercert":false}]```
 
