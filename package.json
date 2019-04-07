@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-cheerio-function",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "Node-RED module cheerio a fast, flexible & lean implementation of core jQuery designed specifically for the server.",
   "author": "t4skforce1337",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "url": "https://github.com/t4skforce/node-red-contrib-cheerio-function.git"
   },
   "dependencies": {
-    "cheerio": "1.0.0-rc.2"
+    "cheerio": "1.0.0-rc.3"
   },
   "keywords": [
     "node-red",
